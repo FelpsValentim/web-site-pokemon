@@ -1,0 +1,323 @@
+@-webkit-keyframes spinning {
+    0% {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(325deg);
+        -webkit-transform: rotate(325deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+}
+
+@-webkit-keyframes translating {
+    0% {
+        transform: translateX(-50%);
+        -webkit-trasform: translateX(-50%);
+    }
+    50% {
+        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+    }
+    100% {
+        transorm: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+    }
+}
+
+@-webkit-keyframes color-change{
+    0%, 20%, 40%, 60%, 100% {
+        background-color: #fff;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        background-color: #f00;
+    } 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #d145c0;
+}
+
+#ByLeandromeda {
+    width: 715px;
+    height: 500px;
+    margin: 0 auto;
+    position:relative;
+}
+
+#ByLeandromeda #moving-container {
+    width: 10em;
+    height: 10em;
+    margin: 0 auto;
+    position: relative;
+}
+
+#ByLeandromeda #pokeball-container {
+    width: 10em;
+    height: 10em;
+    margin: 10px auto 70px;
+    position: relative;
+    -webkit-animation: translating 5s infinite;
+}
+
+#ByLeandromeda #pokeball {
+    width: 10em;
+    height: 10em;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+#ByLeandromeda #pokeball::before {
+    content: '';
+    background-color: red;
+    border-radius: 5em 5em 0 0;
+    width:  10em;
+    position: absolute;
+}
+
+#ByLeandromeda #pokeball .pokeball-details {
+    width: 10em;
+    height: 1em;
+    background-color: #333;
+    position: absolute;
+    top: 4.5em;
+
+}
+
+#ByLeandromeda #pokeball .pokeball-details::before {
+    content: '';
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    top: -1.25em;
+    left: 3.25em;
+    z-index: 200;
+}
+
+#ByLeandromeda #pokeball .pokeball-details::after {
+    content: '';
+    width: 1.8em;
+    height: 1.8em;
+    border: 0.3em solid white;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: -0.65em;
+    left: 3.80em;
+    margin: 0 auto;
+    z-index: 250;
+    -webkit-animation: color-change 3s infinite;
+}
+
+#ByLeandromeda #charmander {
+    position: relative;
+    width: 10em;
+    height: 12em;
+    float: left;
+}
+
+#ByLeandromeda #charmander #body {
+    width: 8em;
+    height: 13em;
+    background-color: #e88923;
+    border-radius: 5em 5em 0 0;
+    z-index: 150;
+    position: relative;
+}
+
+#ByLeandromeda #charmander #feet::before {
+    content: '';
+    width: 2em;
+    height: 2em;
+    background-color: #e88923;
+    border-radius: 0 0 1em 1em;
+    position: absolute;
+    top: 12em;
+}
+
+#ByLeandromeda #charmander #feet::after {
+    content: '';
+    width: 2em;
+    height: 2em;
+    background-color: #e88923;
+    border-radius: 0 0 1em 1em;
+    position: absolute;
+    top: 12em;
+    left: 6em;
+}
+
+#ByLeandromeda #charmander #eyes::before {
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #fff;
+    border-radius: 1em;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+}
+
+#ByLeandromeda #charmander #eyes::after {
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #fff;
+    border-radius: 1em;
+    position: absolute;
+    top: 2em;
+    left: 4.5em;
+}
+
+#ByLeandromeda #charmander #pupils::before {
+    content: '';
+    width: 0.75em;
+    height: 1.5em;
+    background-color: #000;
+    border-radius: 0 1em 1em 0;
+    position:  absolute;
+    top: 2em;
+    left: 5.25em;
+}
+
+#ByLeandromeda #charmander #pupils::after {
+    content: '';
+    width: 0.75em;
+    height: 1.5em;
+    background-color: #000;
+    border-radius: 0 1em 1em 0;
+    position: absolute;
+    top: 2em;
+    left: 1.75em;
+}
+
+#ByLeandromeda #charmander #nostrils::before {
+    content: '';
+    width: 0.25em;
+    height: 0.25em;
+    background-color: #000;
+    border-radius: 1em;
+    position: absolute;
+    top: 3em;
+    left: 3em;
+}
+
+#ByLeandromeda #charmander #nostrils::after {
+    content: '';
+    width: 0.25em;
+    height: 0.25em;
+    background-color: #000;
+    border-radius: 1em;
+    position: absolute;
+    top: 3em;
+    left: 3.75em;
+}
+
+#ByLeandromeda #charmander #mouth::before {
+    content: '';
+    width: 1.25em;
+    height: 0.75em;
+    background-color: #942e58;
+    border-radius: 0 0 3em 3em;
+    position: absolute;
+    top: 3.75em;
+    left: 2.85em;
+}
+
+#ByLeandromeda #charmander #belly {
+    content: '';
+    width: 5.5em;
+    height: 5.5em;
+    background-color: #f8e393;
+    border-radius: 2em 2em 0 2em;
+    position: absolute;
+    top: 7.5em;
+    left: 0.5em;
+    z-index: 10;
+}
+
+#ByLeandromeda #charmander #tail::before {
+    content: '';
+    width: 3em;
+    height: 2.75em;
+    background-color: #e88923;
+    border-radius: 0 0 2em 0;
+    position: absolute;
+    top: 10em;
+    left: 8em;
+    z-index: 10;
+}
+
+#ByLeandromeda #charmander #tail::after {
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #e88923;
+    border-radius: 0 0  50% 0;
+    position: absolute;
+    top:  9.50em;
+    left: 8em;
+    z-index: 10;
+}
+
+#ByLeandromeda #charmander #tail-tip {
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #e88923;
+    border-radius: 2em 2em 0 0;
+    position:  absolute;
+    top: 9em;
+        left:9.5em;
+    z-index: 30;
+}
+
+#ByLeandromeda #charmander #arms::before {
+    content: '';
+    width: 2em;
+    height: 2em;
+    background-color: #e88923;
+    border-radius: 0 2em 2em 0;
+    position: absolute;
+    top: 5.75em;
+    left: 7.75em;
+    z-index: 10;
+}
+
+#ByLeandromeda #charmander #arms::after {
+    content: '';
+    height: 2em;
+    background-color: #e88923;
+    border-radius: 0 2em 2em 0;
+    position: absolute;
+    top: 5.75em;
+    left: 7.75em;
+    z-index: 10;
+}
+
+#ByLeandromeda #charmander #flame {
+    content: '';
+    width: 2.5em;
+    height: 2.5em;
+    overflow: hidden;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    -webkit-transform: rotate(-45deg);
+    background-color: #ffb800;
+    position: absolute;
+    top: 8em;
+    left: 9em;
+    z-index: 300;
+    
+}
